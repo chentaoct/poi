@@ -32,6 +32,7 @@ public class Excel2007Servlet extends HttpServlet {
 			throws ServletException, IOException {
 		String docsPath = request.getSession().getServletContext()
 				.getRealPath("docs");
+		System.out.println("docsPath:"+docsPath);
 		String fileName = "export2007中文_" + System.currentTimeMillis() + ".xlsx";
 		String filePath = docsPath + FILE_SEPARATOR + fileName;
 		try {
