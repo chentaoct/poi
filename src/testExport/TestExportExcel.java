@@ -249,10 +249,10 @@ public class TestExportExcel<T> {
 				"图书出版社", "封面图片" };
 		List<Book> dataset2 = new ArrayList<Book>();
 		try {
-			// BufferedInputStream bis = new BufferedInputStream(
-			// new FileInputStream("V://book.bmp"));
-			BufferedInputStream bis = new BufferedInputStream(
-					new FileInputStream("/home/book.bmp"));
+			 BufferedInputStream bis = new BufferedInputStream(
+			 new FileInputStream("E://book.bmp"));
+			/*BufferedInputStream bis = new BufferedInputStream(
+					new FileInputStream("/home/book.bmp"));*/
 			byte[] buf = new byte[bis.available()];
 			while ((bis.read(buf)) != -1) {
 				//
@@ -267,10 +267,10 @@ public class TestExportExcel<T> {
 					"清华出版社", buf));
 			dataset2.add(new Book(5, "c#入门", "leno", 300.33f, "1234567",
 					"汤春秀出版社", buf));
-			// OutputStream out = new FileOutputStream("E://export2003_a.xls");
-			// OutputStream out2 = new FileOutputStream("E://export2003_b.xls");
-			OutputStream out = new FileOutputStream("/home/export2003_a.xls");
-			OutputStream out2 = new FileOutputStream("/home/export2003_b.xls");
+			 OutputStream out = new FileOutputStream("E://export2003_a.xls");
+			 OutputStream out2 = new FileOutputStream("E://export2003_b.xls");
+		/*	OutputStream out = new FileOutputStream("/home/export2003_a.xls");
+			OutputStream out2 = new FileOutputStream("/home/export2003_b.xls");*/
 			ex.exportExcel(headers, dataset, out);
 			ex2.exportExcel(headers2, dataset2, out2);
 			out.close();
